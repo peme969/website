@@ -1,0 +1,123 @@
+colorScheme = "avocado"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = true
+replyByEmail = false
+disableImageOptimization = false
+disableTextInHeader = false
+highlightCurrentMenuArea = true
+giteaDefaultServer = "https://git.fsfe.org"
+forgejoDefaultServer = "https://v8.next.forgejo.org"
+
+[header]
+layout = "fixed"
+
+[footer]
+showMenu = true
+showCopyright = true
+showThemeAttribution = true
+showAppearanceSwitcher = true
+showScrollToTop = true
+
+[homepage]
+layout = "background"
+showRecent = false
+showRecentItems = 5
+showMoreLink = false
+showMoreLinkDest = "/blog"
+cardView = true
+cardViewScreenWidth = false
+layoutBackgroundBlur = true
+homepageImage = "home.jpg"
+
+[article]
+showHero = true
+heroStyle = "background" 
+showSummary = true
+relatedContentLimit = 4
+showDate = true
+showComments = true
+showViews = true
+showLikes = true
+showRelatedContent = true
+showDateOnlyInArticle = false
+showDateUpdated = true
+showAuthor = true
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true
+showDraftLabel = true
+showEdit = false
+editAppendPath = true
+seriesOpened = false
+showHeadingAnchors = true
+showPagination = true
+invertPagination = false
+showReadingTime = true
+showTableOfContents = true
+showTaxonomies = true
+showAuthorsBadges = true
+showWordCount = true
+showZenMode = false
+
+[list]
+showHero = true
+heroStyle = "background"
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = false
+showSummary = true
+showViews = true
+showLikes = true
+showTableOfContents = true
+showCards = false
+orderByWeight = false
+groupByYear = true
+cardView = false
+cardViewScreenWidth = false
+constrainItemsWidth = false
+
+[sitemap]
+excludedKinds = [ "taxonomy", "term" ]
+
+[taxonomy]
+showTermCount = true
+showHero = true
+heroStyle = "background"
+showBreadcrumbs = true
+showViews = true
+showLikes = true
+showTableOfContents = true
+cardView = true
+
+[term]
+showHero = true
+heroStyle = "background"
+showBreadcrumbs = true
+showViews = true
+showLikes = true
+showTableOfContents = true
+groupByYear = true
+cardView = false
+cardViewScreenWidth = false
+
+[firebase]
+apiKey = "AIzaSyDzQ0fD3GgCPi4_m0mwyER6QJgiQOMyfks"
+authDomain = "peme969-personal.firebaseapp.com"
+projectId = "peme969-personal"
+storageBucket = "peme969-personal.firebasestorage.app"
+messagingSenderId = "755541219178"
+appId = "1:755541219178:web:f3dff4a0ccf639a62ff713"
+measurementId = "G-KT6XXEKSDJ"
+[fathomAnalytics]
+
+[umamiAnalytics]
+
+[selineAnalytics]
+
+[buymeacoffee]
+
+[verification]
+
+[rssnext]

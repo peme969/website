@@ -1,0 +1,24 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Peme969 | My Personal Site & Blog"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "January 2 2006"
+logo = "iconic.png"
+
+[params.author]
+name = "Peme969"
+headline = "Aspiring 13-year-old pythonista, pythoneer, hugo, web, tech & AI enthusiast."
+image = "iconic.png"
+bio = "Pythonista, Pythoneer, Hugo, Web, Tech & AI Enthusiast."
+links = [
+    { github = "https://github.com/peme969" },
+    { codepen = "https://codepen.io/peme969" },
+    { email = "mailto:hello@peme969.dev" },
+    { link = "https://peme969.dev/now" },
+]

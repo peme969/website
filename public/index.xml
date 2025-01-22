@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peme969 | My Personal Site &amp; Blog</title>
+    <link>https://peme969.dev/</link>
+    <description>Recent content on Peme969 | My Personal Site &amp; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Peme969</copyright>
+    <lastBuildDate>Sun, 21 Jan 2024 14:24:36 -0500</lastBuildDate><atom:link href="https://peme969.dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My first post</title>
+      <link>https://peme969.dev/blog/firstpost/firstpost/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://peme969.dev/blog/firstpost/firstpost/</guid>
+      <description>This is my first post on my site</description>
+      
+    </item>
+    
+  </channel>
+</rss>

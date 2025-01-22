@@ -1,0 +1,115 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+## OLD Blog nested menu (categories, tags, posts)
+#[[main]]
+#  name = "blog"
+#  pre = "pencil"
+#  weight = 2
+
+#[[main]]
+#  name = "Tags"
+#  parent = "blog"
+#  pre = "tags"
+#  pageRef = "tags"
+#  weight = 2
+
+#[[main]]
+#  name = "Posts"
+#  parent = "blog"
+#  pre = "comment"
+#  pageRef = "posts"
+#  weight = 2
+
+#[[main]]
+#  name = "Categories"
+#  parent = "blog"
+#  pre = "cate"
+#  pageRef = "Categories"
+#  weight = 2
+#_______ ACTUAL MENU STARTS BELOW...
+# About - Blog - Projects - Github Source - /now - /uses
+# Formatted by 1
+[[main]]
+  name = "about"
+  pre = "face"
+  pageRef = "about"
+  weight = 1
+[[main]]
+  name = "blog"
+  pre = "pencil"
+  pageRef = "blog"
+  weight = 2
+[[main]]
+  name = "projects"
+  pre = "code"
+  pageRef = "projects"
+  weight = 3
+[[main]]
+  name = "/now"
+  pre = "now"
+  pageRef = "now"
+  weight = 4
+[[main]]
+  name = "/uses"
+  pre = "apple"
+  pageRef = "uses"
+  weight = 5
+[[main]]
+  name = "Source"
+  pre = "github"
+  pageRef = "https://github.com/peme969/website"
+  weight = 6
+[[main]]
+  pre = "rss"
+  pageRef = "index.xml"
+  weight = 7
+#[[subnavigation]]
+#  name = "An interesting topic"
+#  pageRef = "tags/interesting-topic"
+#  weight = 10
+
+#[[subnavigation]]
+#  name = "My Awesome Category"
+#  pre = "github"
+#  pageRef = "categories/awesome"
+#  weight = 20
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+# Formatted by 100
+ [[footer]]
+   name = "Blog"
+   pageRef = "blog"
+   weight = 100
+
+ [[footer]]
+   name = "GitHub"
+   pre = "github"
+   url = "https://github.com/peme969"
+   weight = 200
+ [[footer]]
+   name = "Contact Me"
+   pre = "email"
+   url = "mailto:hello@peme969.dev"
+   weight = 300
+ [[footer]]
+  name = "Tags"
+  pre = "tags"
+  pageRef = "tags"
+  weight = 400
+ [[footer]]
+   name = "Sitemap"
+   pre = "sitemap"
+   url = "/sitemap.xml"
+   weight = 500
