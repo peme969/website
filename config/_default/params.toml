@@ -89,7 +89,7 @@ showBreadcrumbs = true
 showViews = true
 showLikes = true
 showTableOfContents = true
-cardView = true
+cardView = false
 
 [term]
 showHero = true

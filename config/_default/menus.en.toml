@@ -61,7 +61,7 @@
 [[main]]
   name = "/uses"
   pre = "apple"
-  pageRef = "uses"
+  pageRef = "../uses"
   weight = 5
 [[main]]
   name = "Source"
