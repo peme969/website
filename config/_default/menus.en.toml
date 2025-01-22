@@ -41,22 +41,22 @@
 [[main]]
   name = "about"
   pre = "face"
-  pageRef = "about"
+  pageRef = "../about"
   weight = 1
 [[main]]
   name = "blog"
   pre = "pencil"
-  pageRef = "blog"
+  pageRef = "../blog"
   weight = 2
 [[main]]
   name = "projects"
   pre = "code"
-  pageRef = "projects"
+  pageRef = "../projects"
   weight = 3
 [[main]]
   name = "/now"
   pre = "now"
-  pageRef = "now"
+  pageRef = "../now"
   weight = 4
 [[main]]
   name = "/uses"
