@@ -1,7 +1,7 @@
 +++
 title = ''
 description = '👋 Hey there!'
-date = 2024-01-21T14:24:36-05:00
+date = 2025-1-23
 draft = false
 +++
 {{< lead >}}
@@ -12,7 +12,7 @@ breakLines=false
 loop=true >}}
 
 Hello! :wave: 
-Explore my website! Watcha' waiting for, eh?
+Explore my website! Whatcha' waiting for, eh?
 This website is cool. Isn't it?
 If you like this website, please star it on github! (check out the Source Link above)
 Powered by Blowfish & Hugo.
