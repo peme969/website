@@ -48,6 +48,24 @@
 .theme-item:active {
   background-color: var(--color-primary-200);
 }
+
+/* Button styles */
+#theme-switcher-btn {
+  background-color: var(--color-primary-500);
+  color: var(--color-neutral-50);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+#theme-switcher-btn:hover {
+  transform: scale(1.1);
+}
 #zen-mode-button {
   cursor:pointer
 }
