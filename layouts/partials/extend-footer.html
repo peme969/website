@@ -2,34 +2,39 @@
   <button id="theme-switcher-btn" style="background: none; border: none; cursor: pointer; font-size: 24px; color: var(--color-neutral-900);">
     🎨
   </button>
-  <ul id="theme-dropdown" style="display: none; position: absolute; bottom: 40px; right: 0; background: var(--color-neutral-50); border: 1px solid var(--color-neutral-300); border-radius: 5px; padding: 5px 0; list-style: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <li data-theme="avocado" style="padding: 5px 10px; cursor: pointer;">Avocado</li>
-    <li data-theme="noir" style="padding: 5px 10px; cursor: pointer;">Noir</li>
-    <li data-theme="ocean" style="padding: 5px 10px; cursor: pointer;">Ocean</li>
-    <li data-theme="fire" style="padding: 5px 10px; cursor: pointer;">Fire</li>
-    <li data-theme="marvel" style="padding: 5px 10px; cursor: pointer;">Marvel</li>
-    <li data-theme="forest" style="padding: 5px 10px; cursor: pointer;">Forest</li>
-    <li data-theme="autumn" style="padding: 5px 10px; cursor: pointer;">Autumn</li>
-    <li data-theme="neon" style="padding: 5px 10px; cursor: pointer;">Neon</li>
+  <ul id="theme-dropdown" style="display: none; position: absolute; bottom: 50px; right: 0; background: var(--color-neutral-50); border: 1px solid var(--color-neutral-300); border-radius: 8px; padding: 8px 0; list-style: none; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+    <li data-theme="avocado" class="theme-item">Avocado</li>
+    <li data-theme="noir" class="theme-item">Noir</li>
+    <li data-theme="ocean" class="theme-item">Ocean</li>
+    <li data-theme="fire" class="theme-item">Fire</li>
+    <li data-theme="marvel" class="theme-item">Marvel</li>
+    <li data-theme="forest" class="theme-item">Forest</li>
+    <li data-theme="autumn" class="theme-item">Autumn</li>
+    <li data-theme="neon" class="theme-item">Neon</li>
   </ul>
 </div>
 <script>
   const themes = ["avocado", "noir", "ocean", "fire", "marvel", "forest", "autumn", "neon"];
   let currentTheme = localStorage.getItem("theme") || "avocado";
 
-  // Apply the selected theme
   const applyTheme = (theme) => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
+
+    // Update the active theme in the dropdown
+    document.querySelectorAll(".theme-item").forEach((item) => {
+      item.style.textDecoration = item.getAttribute("data-theme") === theme ? "underline" : "none";
+      item.style.fontWeight = item.getAttribute("data-theme") === theme ? "bold" : "normal";
+    });
   };
 
-  // Initialize the theme
+  // Initialize the current theme
   applyTheme(currentTheme);
 
-  // Dropdown toggle
   const switcherBtn = document.getElementById("theme-switcher-btn");
   const dropdown = document.getElementById("theme-dropdown");
 
+  // Toggle dropdown visibility
   switcherBtn.addEventListener("click", () => {
     dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
   });
