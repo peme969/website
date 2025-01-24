@@ -34,17 +34,28 @@
   const switcherBtn = document.getElementById("theme-switcher-btn");
   const dropdown = document.getElementById("theme-dropdown");
 
-  // Show dropdown with animation
+  // Show dropdown
+  const openDropdown = () => {
+    dropdown.classList.remove("close");
+    dropdown.classList.add("open");
+    dropdown.style.display = "block";
+  };
+
+  // Hide dropdown
+  const closeDropdown = () => {
+    dropdown.classList.remove("open");
+    dropdown.classList.add("close");
+    setTimeout(() => {
+      dropdown.style.display = "none";
+    }, 300); // Match the duration in the CSS transition
+  };
+
+  // Toggle dropdown visibility
   switcherBtn.addEventListener("click", () => {
-    if (!dropdown.classList.contains("open")) {
-      dropdown.classList.remove("close");
-      dropdown.classList.add("open");
+    if (dropdown.classList.contains("open")) {
+      closeDropdown();
     } else {
-      dropdown.classList.remove("open");
-      dropdown.classList.add("close");
-      setTimeout(() => {
-        dropdown.style.display = "none";
-      }, 300); // Match the duration in the CSS transition
+      openDropdown();
     }
   });
 
@@ -53,22 +64,21 @@
     if (e.target.tagName === "LI") {
       const selectedTheme = e.target.getAttribute("data-theme");
       applyTheme(selectedTheme);
-      dropdown.classList.remove("open");
-      dropdown.classList.add("close");
-      setTimeout(() => {
-        dropdown.style.display = "none";
-      }, 300);
+      closeDropdown();
     }
   });
 
   // Close dropdown when clicking outside
   document.addEventListener("click", (e) => {
     if (!document.getElementById("theme-switcher").contains(e.target)) {
-      dropdown.classList.remove("open");
-      dropdown.classList.add("close");
-      setTimeout(() => {
-        dropdown.style.display = "none";
-      }, 300);
+      closeDropdown();
+    }
+  });
+
+  // Add touch events for mobile
+  document.addEventListener("touchstart", (e) => {
+    if (!document.getElementById("theme-switcher").contains(e.target)) {
+      closeDropdown();
     }
   });
 </script>
