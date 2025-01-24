@@ -19,6 +19,5 @@ bio = "Pythonista, Pythoneer, Hugo, Web, Tech & AI Enthusiast."
 links = [
     { github = "https://github.com/peme969" },
     { codepen = "https://codepen.io/peme969" },
-    { email = "mailto:hello@peme969.dev" },
-    { link = "https://peme969.dev/now" },
+    { envelope = "mailto:me@peme969.dev" }
 ]
