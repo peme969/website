@@ -2,16 +2,15 @@
   <p>Current Theme: <span id="current-theme">Default</span></p>
   <button id="switch-theme" style="padding: 5px 10px; cursor: pointer;">Switch Theme</button>
 </div>
-
 <script>
-  const themes = ["default", "noir", "ocean"]; // Add your themes here
+  const themes = ["avocado", "noir", "ocean", "fire", "marvel", "forest", "autumn"]; // Add all available themes
   let currentIndex = localStorage.getItem("themeIndex") ? parseInt(localStorage.getItem("themeIndex")) : 0;
 
   const updateTheme = () => {
     const theme = themes[currentIndex];
-    document.documentElement.setAttribute("data-theme", theme);
-    document.getElementById("current-theme").textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
-    localStorage.setItem("themeIndex", currentIndex);
+    document.documentElement.setAttribute("data-theme", theme); // Apply the theme
+    document.getElementById("current-theme").textContent = theme.charAt(0).toUpperCase() + theme.slice(1); // Display name
+    localStorage.setItem("themeIndex", currentIndex); // Save in localStorage
   };
 
   document.getElementById("switch-theme").addEventListener("click", () => {
