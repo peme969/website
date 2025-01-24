@@ -59,12 +59,11 @@
     }
   });
 
-  // Handle theme selection
+  // Handle theme selection (keep dropdown open)
   dropdown.addEventListener("click", (e) => {
     if (e.target.tagName === "LI") {
       const selectedTheme = e.target.getAttribute("data-theme");
       applyTheme(selectedTheme);
-      closeDropdown();
     }
   });
 
