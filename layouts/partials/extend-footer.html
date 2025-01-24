@@ -36,13 +36,12 @@
 
   // Show dropdown with animation
   switcherBtn.addEventListener("click", () => {
-    if (dropdown.style.display === "none" || dropdown.style.display === "") {
-      dropdown.style.display = "block";
-      dropdown.classList.add("open");
+    if (!dropdown.classList.contains("open")) {
       dropdown.classList.remove("close");
+      dropdown.classList.add("open");
     } else {
-      dropdown.classList.add("close");
       dropdown.classList.remove("open");
+      dropdown.classList.add("close");
       setTimeout(() => {
         dropdown.style.display = "none";
       }, 300); // Match the duration in the CSS transition
@@ -54,8 +53,8 @@
     if (e.target.tagName === "LI") {
       const selectedTheme = e.target.getAttribute("data-theme");
       applyTheme(selectedTheme);
-      dropdown.classList.add("close");
       dropdown.classList.remove("open");
+      dropdown.classList.add("close");
       setTimeout(() => {
         dropdown.style.display = "none";
       }, 300);
@@ -65,8 +64,8 @@
   // Close dropdown when clicking outside
   document.addEventListener("click", (e) => {
     if (!document.getElementById("theme-switcher").contains(e.target)) {
-      dropdown.classList.add("close");
       dropdown.classList.remove("open");
+      dropdown.classList.add("close");
       setTimeout(() => {
         dropdown.style.display = "none";
       }, 300);
