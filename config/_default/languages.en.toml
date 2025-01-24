@@ -2,8 +2,8 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Peme969's Blog"
-
+title = "Peme969 | My Personal Site & Blog"
+blog_title = "Peme969's Blog"
 [params]
 displayName = "EN"
 isoCode = "en"
