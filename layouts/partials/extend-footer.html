@@ -2,7 +2,7 @@
   <button id="theme-switcher-btn" style="background: none; border: none; cursor: pointer; font-size: 24px; color: var(--color-neutral-900);">
     🎨
   </button>
-  <ul id="theme-dropdown" style="display: none; position: absolute; bottom: 50px; right: 0; background: var(--color-neutral-50); border: 1px solid var(--color-neutral-300); border-radius: 8px; padding: 8px 0; list-style: none; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+  <ul id="theme-dropdown" style="display: none;" class="theme-dropdown">
     <li data-theme="avocado" class="theme-item">Avocado</li>
     <li data-theme="noir" class="theme-item">Noir</li>
     <li data-theme="ocean" class="theme-item">Ocean</li>
@@ -34,9 +34,19 @@
   const switcherBtn = document.getElementById("theme-switcher-btn");
   const dropdown = document.getElementById("theme-dropdown");
 
-  // Toggle dropdown visibility
+  // Show dropdown with animation
   switcherBtn.addEventListener("click", () => {
-    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+      dropdown.style.display = "block";
+      dropdown.classList.add("open");
+      dropdown.classList.remove("close");
+    } else {
+      dropdown.classList.add("close");
+      dropdown.classList.remove("open");
+      setTimeout(() => {
+        dropdown.style.display = "none";
+      }, 300); // Match the duration in the CSS transition
+    }
   });
 
   // Handle theme selection
@@ -44,14 +54,22 @@
     if (e.target.tagName === "LI") {
       const selectedTheme = e.target.getAttribute("data-theme");
       applyTheme(selectedTheme);
-      dropdown.style.display = "none";
+      dropdown.classList.add("close");
+      dropdown.classList.remove("open");
+      setTimeout(() => {
+        dropdown.style.display = "none";
+      }, 300);
     }
   });
 
   // Close dropdown when clicking outside
   document.addEventListener("click", (e) => {
     if (!document.getElementById("theme-switcher").contains(e.target)) {
-      dropdown.style.display = "none";
+      dropdown.classList.add("close");
+      dropdown.classList.remove("open");
+      setTimeout(() => {
+        dropdown.style.display = "none";
+      }, 300);
     }
   });
 </script>
