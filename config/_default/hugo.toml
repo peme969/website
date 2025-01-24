@@ -5,7 +5,20 @@
 theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = "https://peme969.dev/"
 defaultContentLanguage = "en"
-
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 defaultBackgroundImage = "home.jpg"
 enableRobotsTXT = false
@@ -41,7 +54,7 @@ enableEmoji = true
 [related]
   threshold = 0
   toLower = false
-
+  includeNewer = true
     [[related.indices]]
         name = "tags"
         weight = 100
