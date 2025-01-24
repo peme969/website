@@ -30,7 +30,8 @@ buildFuture = false
 enableEmoji = true
 
 # googleAnalytics = "G-XXXXXXXXX"
-
+[params]
+blog = "Peme969's Blog"
 [pagination]
   pagerSize = 100
 
