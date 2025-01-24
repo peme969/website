@@ -41,27 +41,27 @@
 [[main]]
   name = "about"
   pre = "face"
-  pageRef = "../about"
+  pageRef = "/about"
   weight = 1
 [[main]]
   name = "blog"
   pre = "pencil"
-  pageRef = "../blog"
+  pageRef = "/blog"
   weight = 2
 [[main]]
   name = "projects"
   pre = "code"
-  pageRef = "../projects"
+  pageRef = "/projects"
   weight = 3
 [[main]]
   name = "/now"
   pre = "now"
-  pageRef = "../now"
+  pageRef = "/now"
   weight = 4
 [[main]]
   name = "/uses"
   pre = "apple"
-  pageRef = "../uses"
+  pageRef = "/uses"
   weight = 5
 [[main]]
   name = "Source"
@@ -70,7 +70,7 @@
   weight = 6
 [[main]]
   pre = "rss"
-  pageRef = "index.xml"
+  pageRef = "/index.xml"
   weight = 7
 #[[subnavigation]]
 #  name = "An interesting topic"
@@ -90,7 +90,7 @@
 # Formatted by 100
  [[footer]]
    name = "Blog"
-   pageRef = "blog"
+   pageRef = "/blog"
    weight = 100
 
  [[footer]]
@@ -106,7 +106,7 @@
  [[footer]]
   name = "Tags"
   pre = "tags"
-  pageRef = "tags"
+  pageRef = "/tags"
   weight = 400
  [[footer]]
    name = "Sitemap"
