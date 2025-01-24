@@ -14,7 +14,7 @@ loop=true >}}
 Hello! :wave: 
 Explore my website! Whatcha' waitin' for, eh?
 This website is cool. Isn't it?
-If you like this website, please star it on github! (check out the Source Link above)
+If you like this website, please star it 🌟 on github! (check out the Source Link above)
 Powered by Blowfish & Hugo.
 Open-Source, Tech, AI, Hugo, and a Web Enthusiast.
 I updated my website on the first month of 2025! New year, New website! :)
