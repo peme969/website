@@ -1,5 +1,5 @@
 +++
-title = 'Peme969 | My Personal Site & Blog'
+title = ''
 description = '👋 Hey there!'
 date = 2025-01-23
 draft = false
