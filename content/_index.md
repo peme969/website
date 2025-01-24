@@ -1,7 +1,7 @@
 +++
 title = ''
 description = '👋 Hey there!'
-date = 2025-1-23
+date = 2025-01-23
 draft = false
 +++
 {{< lead >}}
