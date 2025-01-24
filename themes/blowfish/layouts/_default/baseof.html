@@ -14,7 +14,6 @@
         class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>{{ i18n
       "nav.skip_to_main" }}</a>
   </div>
-  <script src="/js/theme-switcher.js"></script>
   {{ $header := print "partials/header/" .Site.Params.header.layout ".html" }}
   {{ if templates.Exists $header }}
   {{ partial $header . }}
