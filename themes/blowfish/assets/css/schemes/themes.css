@@ -236,7 +236,7 @@
 --color-secondary-900:    158,102,0;
 }
 [data-scheme="neon"] {
-    :root { --color-neutral: 255, 255, 255;
+  --color-neutral: 255, 255, 255;
 --color-neutral-50:     255,255,255;
 --color-neutral-100:    255,255,255;
 --color-neutral-200:    218,196,249;
@@ -267,5 +267,4 @@
 --color-secondary-700:    0,74,191;
 --color-secondary-800:    0,58,150;
 --color-secondary-900:    0,42,109;
-}
 }
