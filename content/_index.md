@@ -12,7 +12,7 @@ breakLines=false
 loop=true >}}
 
 Hello! :wave: 
-Explore my website! Whatcha' waiting for, eh?
+Explore my website! Whatcha' waitin' for, eh?
 This website is cool. Isn't it?
 If you like this website, please star it on github! (check out the Source Link above)
 Powered by Blowfish & Hugo.
