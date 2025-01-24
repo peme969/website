@@ -11,7 +11,7 @@ lifeLike=true
 breakLines=false 
 loop=true >}}
 
-Hello! :wave: 
+Hello! 👋
 Explore my website! Whatcha' waitin' for, eh?
 This website is cool. Isn't it?
 If you like this website, please star it 🌟 on github! (check out the Source Link above)
