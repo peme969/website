@@ -10,8 +10,8 @@
   <title>{{ .Site.Title | emojify }}</title>
   <meta name="title" content="{{ .Site.Title | emojify }}" />
   {{- else -}}
-  <title>{{ .Title | emojify }} </title>
-  <meta name="title" content="{{ .Title | emojify }}" />
+  <title>{{ .Title | emojify }} &middot; {{ .Site.Blog_Title | emojify }}</title>
+  <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Blog_Title | emojify }}" />
   {{- end }}
   {{/* Metadata */}}
   {{ with (.Params.Summary | default .Params.Description) | default .Site.Params.description -}}
