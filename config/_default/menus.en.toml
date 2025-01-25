@@ -70,7 +70,7 @@
   weight = 6
 [[main]]
   pre = "rss"
-  pageRef = "/index.xml"
+  pageRef = "index.xml"
   weight = 7
 #[[subnavigation]]
 #  name = "An interesting topic"
