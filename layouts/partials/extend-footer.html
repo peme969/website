@@ -127,16 +127,17 @@
   const switcherBtn = document.getElementById("theme-switcher-btn");
   const dropdown = document.getElementById("theme-dropdown");
 
-  // Toggle dropdown visibility
+  // Toggle dropdown visibility and arrow direction
   switcherBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const isVisible = dropdown.style.visibility === "visible";
     dropdown.style.visibility = isVisible ? "hidden" : "visible";
     dropdown.style.opacity = isVisible ? "0" : "1";
     dropdown.style.transform = isVisible ? "translateY(10px)" : "translateY(0)";
+    switcherBtn.innerHTML = `🎨 Themes ${isVisible ? "&dtrif;" : "&utrif;"}`;
   });
 
-  // Handle theme selection
+  // Handle theme selection (keep dropdown open)
   dropdown.addEventListener("click", (e) => {
     if (e.target.tagName === "A") {
       e.preventDefault();
@@ -151,6 +152,7 @@
       dropdown.style.visibility = "hidden";
       dropdown.style.opacity = "0";
       dropdown.style.transform = "translateY(10px)";
+      switcherBtn.innerHTML = `🎨 Themes &dtrif;`;
     }
   });
 </script>
