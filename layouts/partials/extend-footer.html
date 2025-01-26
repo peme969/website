@@ -1,4 +1,4 @@
-<div id="theme-switcher" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000;">
+<!-- <div id="theme-switcher" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000;">
   <button id="theme-switcher-btn" style="background: none; border: none; cursor: pointer; font-size: 24px; color: var(--color-neutral-900);">
     🎨
   </button>
@@ -78,6 +78,79 @@
   document.addEventListener("touchstart", (e) => {
     if (!document.getElementById("theme-switcher").contains(e.target)) {
       closeDropdown();
+    }
+  });
+</script> --->
+<div id="theme-switcher" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000;">
+  <nav class="primary-navigation">
+    <ul>
+      <li>
+        <a href="#" id="theme-switcher-btn">🎨 Themes &dtrif;</a>
+        <ul id="theme-dropdown" class="dropdown">
+          <li data-theme="avocado"><a href="#">Avocado</a></li>
+          <li data-theme="noir"><a href="#">Noir</a></li>
+          <li data-theme="ocean"><a href="#">Ocean</a></li>
+          <li data-theme="fire"><a href="#">Fire</a></li>
+          <li data-theme="marvel"><a href="#">Marvel</a></li>
+          <li data-theme="forest"><a href="#">Forest</a></li>
+          <li data-theme="autumn"><a href="#">Autumn</a></li>
+          <li data-theme="neon"><a href="#">Neon</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<script>
+  const themes = ["avocado", "noir", "ocean", "fire", "marvel", "forest", "autumn", "neon"];
+  let currentTheme = localStorage.getItem("theme") || "avocado";
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+
+    // Update the active theme in the dropdown
+    document.querySelectorAll("#theme-dropdown li a").forEach((item) => {
+      const parentLi = item.parentElement;
+      if (parentLi.getAttribute("data-theme") === theme) {
+        item.style.fontWeight = "bold";
+        item.style.textDecoration = "underline";
+      } else {
+        item.style.fontWeight = "normal";
+        item.style.textDecoration = "none";
+      }
+    });
+  };
+
+  // Initialize the current theme
+  applyTheme(currentTheme);
+
+  const switcherBtn = document.getElementById("theme-switcher-btn");
+  const dropdown = document.getElementById("theme-dropdown");
+
+  // Toggle dropdown visibility
+  switcherBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const isVisible = dropdown.style.visibility === "visible";
+    dropdown.style.visibility = isVisible ? "hidden" : "visible";
+    dropdown.style.opacity = isVisible ? "0" : "1";
+    dropdown.style.transform = isVisible ? "translateY(10px)" : "translateY(0)";
+  });
+
+  // Handle theme selection
+  dropdown.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      e.preventDefault();
+      const selectedTheme = e.target.parentElement.getAttribute("data-theme");
+      applyTheme(selectedTheme);
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!document.getElementById("theme-switcher").contains(e.target)) {
+      dropdown.style.visibility = "hidden";
+      dropdown.style.opacity = "0";
+      dropdown.style.transform = "translateY(10px)";
     }
   });
 </script>
