@@ -1,5 +1,5 @@
 /*! Blowfish | MIT License | https://github.com/nunocoracao/blowfish */
-/* Dropdown styles */
+/* Dropdown styles 
 #theme-dropdown {
   min-width: 180px;
   padding: 8px 0;
@@ -9,23 +9,19 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(-20px);
-  pointer-events: none; /* Prevent interaction when hidden */
+  pointer-events: none; 
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 #theme-dropdown.open {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto; /* Enable interaction when visible */
+  pointer-events: auto;
 }
-
 #theme-dropdown.close {
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
 }
-
-/* List items */
 .theme-item {
   padding: 10px 15px;
   font-size: 14px;
@@ -34,22 +30,17 @@
   border-bottom: 1px solid var(--color-neutral-300);
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
-
 .theme-item:last-child {
   border-bottom: none;
 }
-
 .theme-item:hover {
   background-color: var(--color-primary-100);
   color: var(--color-primary-700);
   box-shadow: inset 0 0 5px var(--color-primary-200);
 }
-
 .theme-item:active {
   background-color: var(--color-primary-200);
 }
-
-/* Button styles */
 #theme-switcher-btn {
   background-color: var(--color-primary-500);
   color: var(--color-neutral-50);
@@ -62,9 +53,82 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
-
 #theme-switcher-btn:hover {
-  transform: scale(1.1);
+  transfor: scale(1.1);
+} */
+
+/* Primary navigation dropdown integration */
+nav.primary-navigation {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Arvo", sans-serif;
+}
+
+nav.primary-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.primary-navigation ul li {
+  position: relative;
+  display: inline-block;
+}
+
+nav.primary-navigation ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav.primary-navigation ul li a:hover {
+  color: #3ca0e7;
+}
+
+nav.primary-navigation ul li ul.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 10px 0;
+  background: white;
+  border: 1px solid #3ca0e7;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+nav.primary-navigation ul li:hover > ul.dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav.primary-navigation ul li ul.dropdown li {
+  display: block;
+  text-align: left;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+nav.primary-navigation ul li ul.dropdown li:last-child {
+  border-bottom: none;
+}
+
+nav.primary-navigation ul li ul.dropdown li a {
+  color: black;
+  transition: padding-left 0.3s ease, color 0.3s ease;
+}
+
+nav.primary-navigation ul li ul.dropdown li a:hover {
+  padding-left: 15px;
+  color: #3ca0e7;
 }
 #zen-mode-button {
   cursor:pointer
