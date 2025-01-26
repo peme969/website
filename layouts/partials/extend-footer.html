@@ -85,7 +85,7 @@
   <nav class="primary-navigation">
     <ul>
       <li>
-        <a href="#" id="theme-switcher-btn">🎨 Themes &dtrif;</a>
+        <a href="#" id="theme-switcher-btn">🎨 Themes &uarr;</a>
         <ul id="theme-dropdown" class="dropdown">
           <li data-theme="avocado"><a href="#">Avocado</a></li>
           <li data-theme="noir"><a href="#">Noir</a></li>
@@ -109,14 +109,12 @@
     localStorage.setItem("theme", theme);
 
     // Update the active theme in the dropdown
-    document.querySelectorAll("#theme-dropdown li a").forEach((item) => {
-      const parentLi = item.parentElement;
+    document.querySelectorAll("#theme-dropdown li").forEach((item) => {
+      const parentLi = item;
       if (parentLi.getAttribute("data-theme") === theme) {
-        item.style.fontWeight = "bold";
-        item.style.textDecoration = "underline";
+        parentLi.classList.add("selected"); // Highlight selected theme
       } else {
-        item.style.fontWeight = "normal";
-        item.style.textDecoration = "none";
+        parentLi.classList.remove("selected");
       }
     });
   };
@@ -134,7 +132,7 @@
     dropdown.style.visibility = isVisible ? "hidden" : "visible";
     dropdown.style.opacity = isVisible ? "0" : "1";
     dropdown.style.transform = isVisible ? "translateY(10px)" : "translateY(0)";
-    switcherBtn.innerHTML = `🎨 Themes ${isVisible ? "&dtrif;" : "&utrif;"}`;
+    switcherBtn.innerHTML = `🎨 Themes ${isVisible ? "&utrif;" : "&dtrif;"}`;
   });
 
   // Handle theme selection (keep dropdown open)
@@ -152,7 +150,7 @@
       dropdown.style.visibility = "hidden";
       dropdown.style.opacity = "0";
       dropdown.style.transform = "translateY(10px)";
-      switcherBtn.innerHTML = `🎨 Themes &dtrif;`;
+      switcherBtn.innerHTML = `🎨 Themes &utrif;`;
     }
   });
 </script>
