@@ -93,14 +93,14 @@ nav.primary-navigation ul li ul.dropdown {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  left: 0;
+  bottom: 100%; /* Open upwards */
   margin: 0;
   padding: 10px 0;
   background: white;
   border: 1px solid #3ca0e7;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  transform: translateY(10px);
+  transform: translateY(10px); /* Start position for upward animation */
   transition: all 0.3s ease;
 }
 
@@ -129,6 +129,14 @@ nav.primary-navigation ul li ul.dropdown li a {
 nav.primary-navigation ul li ul.dropdown li a:hover {
   padding-left: 15px;
   color: #3ca0e7;
+}
+
+#theme-switcher-btn {
+  transition: transform 0.3s ease;
+}
+
+#theme-switcher-btn.open {
+  transform: rotate(180deg); /* Rotate arrow when open */
 }
 #zen-mode-button {
   cursor:pointer
