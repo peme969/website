@@ -85,7 +85,7 @@
   <nav class="primary-navigation">
     <ul>
       <li>
-        <a href="#" id="theme-switcher-btn">🎨 Themes &uarr;</a>
+        <a href="#" id="theme-switcher-btn">🎨 Themes &#8593;</a>
         <ul id="theme-dropdown" class="dropdown">
           <li data-theme="avocado"><a href="#">Avocado</a></li>
           <li data-theme="noir"><a href="#">Noir</a></li>
@@ -132,7 +132,7 @@
     dropdown.style.visibility = isVisible ? "hidden" : "visible";
     dropdown.style.opacity = isVisible ? "0" : "1";
     dropdown.style.transform = isVisible ? "translateY(10px)" : "translateY(0)";
-    switcherBtn.innerHTML = `🎨 Themes ${isVisible ? "&utrif;" : "&dtrif;"}`;
+    switcherBtn.innerHTML = `🎨 Themes ${isVisible ? "&#8593;" : "&#8595;"}`;
   });
 
   // Handle theme selection (keep dropdown open)
