@@ -56,6 +56,30 @@
 #theme-switcher-btn:hover {
   transfor: scale(1.1);
 } */
+.avocado {
+  border-color:green;
+}
+.neon {
+  border-color:pink;
+}
+.marvel {
+  border-color:red;
+}
+.noir {
+  border-color:slate;
+}
+.ocean {
+  border-color:blue;
+}
+.fire {
+  border-color:rose;
+}
+.autumn {
+  border-color:brown;
+}
+.forest {
+  border-color:lightblue;
+}
 /* Dropdown Menu Styles */
 nav.primary-navigation ul li ul.dropdown {
   visibility: hidden;
