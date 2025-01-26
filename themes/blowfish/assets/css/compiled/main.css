@@ -82,6 +82,7 @@ nav.primary-navigation ul li:hover > ul.dropdown {
 nav.primary-navigation ul li ul.dropdown li {
   display: block;
   text-align: left;
+  width:100%;
   padding: 10px 20px;
   border-left: 4px solid transparent; /* Default, transparent border */
   transition: all 0.3s ease;
