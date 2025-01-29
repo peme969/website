@@ -51,3 +51,6 @@
 
 
 </div>
+
+# Licenses
+- Blog content under <a href='LICENSE'>CC BY-ND 4.0</a>
